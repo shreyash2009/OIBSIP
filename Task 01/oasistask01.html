@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="task1.css">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+</head> 
+<body>
+
+    <header>
+        <a href="#" class="brand">ANIME</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="nav-items">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Gallery</a>
+                <a href="#">Contact</a>  
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <video class=" video-slide active" src="media/9convert.com - Naruto Shippuden OP  Opening 16 60FPS_Trim.mp4"  autoplay muted loop ></video>
+        <video class="video-slide" src="media/9convert.com - Dragon Ball Super  Opening 2 Version 2 FULL HD_Trim.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="media/The beautiful world of attack on titan by studio wit ✨_Trim.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="media/9convert.com - Jujutsu Kaisen Opening 1 4k 60FPSCreditless_Trim.mp4" autoplay muted loop></video>
+
+
+        <div class="content active">
+            <h1>NARUTO <br> <span>SHIPUDDEN</span> </h1>
+            <p>It has been two and a half years since Naruto Uzumaki left Konohagakure, the Hidden Leaf Village, for intense training following events which fueled his desire to be stronger. Now Akatsuki, the mysterious organization of elite rogue ninja, is closing in on their grand plan which may threaten the safety of the entire shinobi world. Although Naruto is older and sinister events loom on the horizon, he has changed little in personality—still rambunctious and childish—though he is now far more confident and possesses an even greater determination to protect his friends and home. Come whatever may, Naruto will carry on with the fight for what is important to him, even at the expense of his own body, in the continuation of the saga about the boy who wishes to become Hokage.</p>
+            <a href="https://zoro.to/watch/naruto-shippuden-355?ep=7882" target="_blank">Watch Now</a>
+        </div>
+
+        <div class="content ">
+            <h1>DRAGON BALL <br> <span>Z SUPER</span> </h1>
+            <p>Seven years after the events of Dragon Ball Z, Earth is at peace, and its people live free from any dangers lurking in the universe. However, this peace is short-lived; a sleeping evil awakens in the dark reaches of the galaxy: Beerus, the ruthless God of Destruction. Disturbed by a prophecy that he will be defeated by a "Super Saiyan God," Beerus and his angelic attendant Whis start searching the universe for this mysterious being. Before long, they reach Earth where they encounter SON-Goku, one of the planet's mightiest warriors, and his similarly powerful friends.</p>
+            <a href="https://zoro.to/watch/dragon-ball-super-1692?ep=22219" target="_blank">Watch Now</a>
+        </div>
+
+        <div class="content ">
+            <h1>ATTACK  <br> <span>ON TITANS</span> </h1>
+            <p>Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called titans, forcing humans to hide in fear behind enormous concentric walls. What makes these giants truly terrifying is that their taste for human flesh is not born out of hunger but what appears to be out of pleasure. To ensure their survival, the remnants of humanity began living within defensive barriers, resulting in one hundred years without a single titan encounter. However, that fragile calm is soon shattered when a colossal titan manages to breach the supposedly impregnable outer wall, reigniting the fight for survival against the man-eating abominations. After witnessing a horrific personal loss at the hands of the invading creatures, Eren Yeager dedicates his life to their eradication by enlisting into the Survey Corps, an elite military unit that combats the merciless humanoids outside the protection of the walls. Based on Hajime Isayama's award-winning manga, Shingeki no Kyojin follows Eren, along with his adopted sister Mikasa Ackerman and his childhood friend Armin Arlert, as they join the brutal war against the titans and race to discover a way of defeating them before the last walls are breached. </p>
+            <a href="https://zoro.to/watch/attack-on-titan-112?ep=3321" target="_blank">Watch Now</a>
+        </div>
+
+        <div class="content ">
+            <h1>JUJUTSU <br> <span>KAISEN</span> </h1>
+            <p>Idly indulging in baseless paranormal activities with the Occult Club, high schooler Yuuji Itadori spends his days at either the clubroom or the hospital, where he visits his bedridden grandfather. However, this leisurely lifestyle soon takes a turn for the strange when he unknowingly encounters a cursed item. Triggering a chain of supernatural occurrences, Yuuji finds himself suddenly thrust into the world of Curses—dreadful beings formed from human malice and negativity—after swallowing the said item, revealed to be a finger belonging to the demon Sukuna Ryoumen, the "King of Curses." Yuuji experiences first-hand the threat these Curses pose to society as he discovers his own newfound powers. Introduced to the Tokyo Metropolitan Jujutsu Technical High School, he begins to walk down a path from which he cannot return—the path of a Jujutsu sorcerer. </p>
+            <a href="https://zoro.to/watch/jujutsu-kaisen-tv-534?ep=10789" target="_blank">Watch Now</a>
+        </div>
+
+        <div class="media">
+            <a href="https://www.linkedin.com/in/shreyash-chaple-2b45aa213"><i class="fab fa-facebook-f"></i> </a>
+            <a href="https://github.com/shreyash2009"><i class="fab fa-github"></i> </a>
+            <a href="#"><i class="fab fa-instagram"></i> </a>
+        </div>
+
+        <div class="slider-nav">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const nav = document.querySelector('.navigation');
+        menuBtn.addEventListener("click", ()=>{
+            menuBtn.classList.toggle("active");
+            nav.classList.toggle("active");
+        });
+
+
+        // js slider
+        const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active"); 
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+</body>
+</html>
